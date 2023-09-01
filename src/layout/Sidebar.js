@@ -2,6 +2,10 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 import CompanyLogo from "../assets/images/company-logo.png";
+import DashIcon from "../assets/svg/Dashboard-icon.svg";
+import DashIconInactive from "../assets/svg/Dashboard-icon-inactive.svg";
+
+
 
 export default function Sidebar() {
   const [showSidebar, setShowSidebar] = useState("-left-[19.2rem]");
@@ -22,12 +26,19 @@ export default function Sidebar() {
                   to="/"
                   exact="true"
                   className={({ isActive }) =>
+                  `flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg ${
                     isActive
-                      ? "flex items-center text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg bg-[#D5E6FB] text-[#0060FF]"
-                      : "flex items-center text-[18px] leading-[21px] font-medium px-[29px] py-[14px] text-[#000000] rounded-lg"
-                  }
+                      ? 'bg-[#D5E6FB] text-[#0060FF]'
+                      : 'text-[#000000]'
+                  }`
+                }
                 >
-                  Dashboard
+                  {({ isActive }) => (
+                      <>
+                      <img src={isActive ? DashIcon : DashIconInactive} alt={isActive ? "Active" : "Inactive"} />
+                      <span>Dashboard</span>
+                      </>
+                  )}
                 </NavLink>
               </li>
               <li className="rounded-lg mb-2">
@@ -35,8 +46,8 @@ export default function Sidebar() {
                   to="./markets"
                   className={({ isActive }) =>
                     isActive
-                      ? "flex items-center text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg bg-[#D5E6FB] text-[#0060FF]"
-                      : "flex items-center gap-4 text-[18px] leading-[21px] font-medium px-[29px] py-[14px] text-[#000000] rounded-lg"
+                      ? "flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg bg-[#D5E6FB] text-[#0060FF]"
+                      : "flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] text-[#000000] rounded-lg"
                   }
                 >
                   Markets
@@ -47,8 +58,8 @@ export default function Sidebar() {
                   to="/transactions"
                   className={({ isActive }) =>
                     isActive
-                      ? "flex items-center text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg bg-[#D5E6FB] text-[#0060FF]"
-                      : "flex items-center gap-4 text-[18px] leading-[21px] font-medium px-[29px] py-[14px] text-[#000000] rounded-lg"
+                      ? "flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg bg-[#D5E6FB] text-[#0060FF]"
+                      : "flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] text-[#000000] rounded-lg"
                   }
                 >
                   Transactions
@@ -59,8 +70,8 @@ export default function Sidebar() {
                   to="/profile"
                   className={({ isActive }) =>
                     isActive
-                      ? "flex items-center text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg bg-[#D5E6FB] text-[#0060FF]"
-                      : "flex items-center gap-4 text-[18px] leading-[21px] font-medium px-[29px] py-[14px] text-[#000000] rounded-lg"
+                      ? "flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg bg-[#D5E6FB] text-[#0060FF]"
+                      : "flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] text-[#000000] rounded-lg"
                   }
                 >
                   {/* <Icon name="map" size="2xl" /> */}
@@ -72,8 +83,8 @@ export default function Sidebar() {
                   to="/setting"
                   className={({ isActive }) =>
                     isActive
-                      ? "flex items-center text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg bg-[#D5E6FB] text-[#0060FF]"
-                      : "flex items-center gap-4 text-[18px] leading-[21px] font-medium px-[29px] py-[14px] text-[#000000] rounded-lg"
+                      ? "flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg bg-[#D5E6FB] text-[#0060FF]"
+                      : "flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] text-[#000000] rounded-lg"
                   }
                 >
                   {/* <Icon name="map" size="2xl" /> */}
