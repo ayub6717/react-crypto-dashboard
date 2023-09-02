@@ -5,6 +5,7 @@ import Markets from "./pages/Markets";
 import Transactions from "./pages/Transactions";
 import Profile from "./pages/Profile";
 import Setting from "./pages/Setting";
+import Help from "./pages/Help";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route exact path="/transactions" element={<Transactions />} />
               <Route exact path="/profile" element={<Profile />} />
               <Route exact path="/setting" element={<Setting />} />
+              <Route exact path="/help" element={<Help />} />
           </Routes>
       </div>
     </div>
