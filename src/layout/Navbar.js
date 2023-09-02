@@ -18,7 +18,7 @@ export default function Navbar({ showSidebar, setShowSidebar }) {
             >
               <path
                 d="M4 13H22M4 7H22M4 19H16"
-                stroke="white"
+                stroke="#898989"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -51,7 +51,7 @@ export default function Navbar({ showSidebar, setShowSidebar }) {
         </div>
 
         <div className="flex justify-between items-center w-full">
-          <h4 className="uppercase text-white text-sm tracking-wider mt-1">
+          <h4 className="uppercase text-[#141414] text-sm tracking-wider mt-1">
             {location === "/"
               ? "DASHBOARD"
               : location.toUpperCase().replace("/", "")}
