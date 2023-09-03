@@ -11,7 +11,7 @@ export default function Sidebar() {
     <>
       <Navbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <div
-        className={`h-screen fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-[307px] z-10 py-4 px-[50px] transition-all duration-300`}
+        className={`h-screen fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden dark:bg-[#1C1C25] border-r border-[#DEE5EC] dark:border-[#202128] bg-white w-[307px] z-10 py-4 px-[50px] transition-all duration-300`}
       >
         <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
           <NavLink to="/" className="mt-[26px] text-center w-full inline-block">

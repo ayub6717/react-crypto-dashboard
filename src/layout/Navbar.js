@@ -1,10 +1,11 @@
 import { useLocation } from "react-router-dom";
+import Switcher from "../components/Switcher";
 
 export default function Navbar({ showSidebar, setShowSidebar }) {
   const location = useLocation().pathname;
 
   return (
-    <nav className="bg-light-blue-500 md:ml-[19.2rem] py-[37px] pl-[39px] pr-[37px]">
+    <nav className="dark:bg-[#1C1C25] md:ml-[19.2rem] py-[37px] pl-[39px] pr-[37px]">
       <div className="container max-w-full mx-auto flex items-center justify-between">
         <div className="md:hidden">
           <button onClick={() => setShowSidebar("left-0")}>
@@ -58,8 +59,31 @@ export default function Navbar({ showSidebar, setShowSidebar }) {
           </h4>
 
           <div className="flex">
-            <p>Profile Dropdown</p>
+            <form className="max-w-sm px-4">
+              <div className="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-400 left-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-gray-50 focus:bg-white focus:border-indigo-600"
+                />
+              </div>
+            </form>
           </div>
+          <Switcher />
         </div>
       </div>
     </nav>

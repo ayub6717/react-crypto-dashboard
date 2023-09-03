@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Sidebar />
-      <div className="md:ml-[19.2rem] bg-[#F0F8FF] px-[34px] min-h-[calc(100vh-98px)]">
+      <div className="md:ml-[19.2rem] bg-[#F0F8FF] dark:bg-[#12131A] px-[34px] min-h-[calc(100vh-98px)]">
           <Routes>
               <Route exact path="/" element={<Dashboard />} />
               <Route exact path="/markets" element={<Markets />} />
