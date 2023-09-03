@@ -3,7 +3,8 @@ import IconWalet from '../assets/images/IconWallet.png'
 import VectorIcon from '../assets/images/Vector.png'
 import EyeIcon from '../assets/svg/Eye.svg'
 import Table from '../components/Table'
-import {currentRateDate, rateHistoryData} from '../data/currencyData';
+import {rateHistoryData} from '../data/currencyData';
+import TabsRender from '../components/Tabs'
 function Dashboard() {
   return (
     <div className='py-[28px]'>
@@ -62,10 +63,9 @@ function Dashboard() {
           <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
             
           </div>
-          <div className="bg-white dark:bg-[#1C1C25] rounded-[15px] py-5 px-[39px]">
-              <div className='w-[400px] h-[428px] overflow-auto custom-scrollbar'>
-                  <Table data={currentRateDate} />
-              </div>
+          <div className="bg-white dark:bg-[#1C1C25] rounded-[15px] py-5 px-[39px] w-[478px] relative">
+            <p className='absolute left-[39px] top-[37px] text-[#000] text-[20px] font-semibold leading-[28px]'>Markets</p>
+              <TabsRender />
           </div>
         </div>
 
@@ -76,12 +76,12 @@ function Dashboard() {
           <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
             
           </div>
-          <div className="bg-white dark:bg-[#1C1C25] rounded-[15px] py-5 px-[39px]">
+          <div className="bg-white dark:bg-[#1C1C25] rounded-[15px] pt-5 px-[39px]">
             <div className='flex justify-between items-center'>
               <p className='text-[#000] text-[20px] font-semibold leading-7'>History</p>
               <button className='text-[#8c8c8c] text-[10px] font-semibold leading-[22px] border border-[#E5E5E5] rounded-[7px] px-2.5 py-1 inline-block'>View All</button>
             </div>
-            <div className='w-[544px] h-[211px] overflow-auto custom-scrollbar mt-[18px]'>
+            <div className='w-[544px] h-[200px] overflow-auto custom-scrollbar mt-[18px]'>
               <Table data={rateHistoryData} />
             </div>
           </div>

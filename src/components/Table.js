@@ -61,7 +61,7 @@ const Table = ({ data }) => {
               {columns.map((column, colIndex) => (
                 <td
                   key={colIndex}
-                  className={`px-4 py-[11px] border-b border-gray-200 ${
+                  className={`px-4 py-[8px] border-b border-gray-200 ${
                     column === "currency"
                       ? "text-[#000] text-[12px] font-semibold leading-7 text-start"
                       : column === "digital_currency"
