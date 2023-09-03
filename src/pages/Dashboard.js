@@ -2,6 +2,8 @@ import React from 'react'
 import IconWalet from '../assets/images/IconWallet.png'
 import VectorIcon from '../assets/images/Vector.png'
 import EyeIcon from '../assets/svg/Eye.svg'
+import Table from '../components/Table'
+import {currentRateDate, rateHistoryData} from '../data/currencyData';
 function Dashboard() {
   return (
     <div className='py-[28px]'>
@@ -55,7 +57,34 @@ function Dashboard() {
               <span className='bg-[#2196543c] rounded-[60px] px-2 text-[#219653] text-[11px] leading-[22px] font-semibold word-break'>+14.67%</span>
             </div>
           </div>
-          
+        </div>
+        <div className="flex mt-[27px] gap-[25px]">
+          <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
+            
+          </div>
+          <div className="bg-white dark:bg-[#1C1C25] rounded-[15px] py-5 px-[39px]">
+              <div className='w-[400px] h-[428px] overflow-auto custom-scrollbar'>
+                  <Table data={currentRateDate} />
+              </div>
+          </div>
+        </div>
+
+        <div className="flex mt-[27px] gap-[25px]">
+          <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
+            
+          </div>
+          <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
+            
+          </div>
+          <div className="bg-white dark:bg-[#1C1C25] rounded-[15px] py-5 px-[39px]">
+            <div className='flex justify-between items-center'>
+              <p className='text-[#000] text-[20px] font-semibold leading-7'>History</p>
+              <button className='text-[#8c8c8c] text-[10px] font-semibold leading-[22px] border border-[#E5E5E5] rounded-[7px] px-2.5 py-1 inline-block'>View All</button>
+            </div>
+            <div className='w-[544px] h-[211px] overflow-auto custom-scrollbar mt-[18px]'>
+              <Table data={rateHistoryData} />
+            </div>
+          </div>
         </div>
     </div>
   )
