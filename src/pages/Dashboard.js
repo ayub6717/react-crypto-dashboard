@@ -5,6 +5,8 @@ import TabsRender from '../components/Tabs'
 import Button from '../components/Button'
 import CurrencyCard from '../components/CurrencyCard'
 import BalanceCard from '../components/BalanceCard';
+import ChartBar from '../components/ChartBar';
+import DonutChart from '../components/Dough';
 function Dashboard() {
   return (
     <div className='py-[28px]'>
@@ -19,7 +21,7 @@ function Dashboard() {
         </div>
         <div className="xl:flex mt-[27px] gap-[25px]">
           <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
-            
+            <ChartBar />
           </div>
           <div className="bg-white dark:bg-[#1C1C25] rounded-[15px] py-5 pl-[39px] pr-[20px] xl:w-[478px] relative">
             <p className='absolute left-[39px] top-[37px] text-[#000] text-[20px] font-semibold leading-[28px] dark:text-white'>Markets</p>
@@ -28,8 +30,8 @@ function Dashboard() {
         </div>
 
         <div className="xl:flex mt-[27px] gap-[25px]">
-          <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
-            
+          <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px] py-[21px] px-[29px]"> 
+              <DonutChart />
           </div>
           <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
             

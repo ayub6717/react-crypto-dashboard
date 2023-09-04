@@ -3,10 +3,15 @@ import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 import CompanyLogo from "../assets/images/company-logo.png";
 import LogoutIcon from "../assets/svg/Logout-icon.svg";
+// import LogModeImage from '../assets/svg/Logout-iconDark.svg'
 import { dashboardToSettingsData, helpData } from "../data/IconData";
+import useDarkSide from '../hooks/useDarkSide';
+
 
 export default function Sidebar() {
   const [showSidebar, setShowSidebar] = useState("-left-[19.2rem]");
+  // const [colorTheme] = useDarkSide();
+
   return (
     <>
       <Navbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
@@ -32,7 +37,7 @@ export default function Sidebar() {
                       exact={`${exact}`}
                       className={({ isActive }) => `
                       flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg
-                      ${isActive ? "bg-[#D5E6FB] text-[#0060FF]" : "text-[#000000]"}
+                      ${isActive ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF] dark:text-white" : "text-[#000000] dark:text-white"}
                     `}
                     >
                       {({ isActive }) => (
@@ -73,7 +78,7 @@ export default function Sidebar() {
                     exact={`${exact}`}
                     className={({ isActive }) => `
                     flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg
-                    ${isActive ? "bg-[#D5E6FB] text-[#0060FF]" : "text-[#000000]"}
+                    ${isActive ? "bg-[#D5E6FB] dark:bg-[#062141] text-[#0060FF] dark:text-white" : "text-[#000000] dark:text-white"}
                   `}
                   >
                     {({ isActive }) => (
@@ -92,8 +97,9 @@ export default function Sidebar() {
               <li className="rounded-lg mb-4 hover:text-[#0060FF]">
                 <button className="flex items-center gap-[14px] text-[18px] leading-[21px] font-medium px-[29px] py-[14px] rounded-lg">
                   <>
-                    <img src={LogoutIcon} alt="Logout" />
-                    <span>Log Out</span>
+                    {/* <img src={colorTheme === 'light' ? LogoutIcon : LogModeImage} alt="img" /> */}
+                    <img src={LogoutIcon} alt="img" />
+                    <span className=" dark:text-white">Log Out</span>
                   </>
                 </button>
               </li>
