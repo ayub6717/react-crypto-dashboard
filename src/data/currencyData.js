@@ -73,14 +73,14 @@ export const currentRateDate = [
       to_currency: 'FTMUSDT',
       to_amount: '-$791',
       time: '06:45 PM',
-      badge: 'Rejected',
+      badge: 'Pending',
     },
     {
       img: DownIcon,
       to_currency: 'DOGEUSDT',
       to_amount: '+$3500',
       time: '02:10 AM',
-      badge: 'Rejected',
+      badge: 'Done',
     },
     {
       img: UpIcon,
