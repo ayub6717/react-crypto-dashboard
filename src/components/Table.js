@@ -53,7 +53,7 @@ const Table = ({ data }) => {
   };
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto dark:bg-[#1C1C25]">
       <table className="min-w-full table-auto">
         <tbody>
           {data.map((row, rowIndex) => (
@@ -61,17 +61,17 @@ const Table = ({ data }) => {
               {columns.map((column, colIndex) => (
                 <td
                   key={colIndex}
-                  className={`px-4 py-[8px] border-b border-gray-200 ${
+                  className={`px-4 py-[8px] border-b border-[#f2f2f2] dark:border-[#272730] ${
                     column === "currency"
-                      ? "text-[#000] text-[12px] font-semibold leading-7 text-start"
+                      ? "text-[#000] dark:text-white text-[12px] font-semibold leading-7 text-start"
                       : column === "digital_currency"
-                      ? "text-[#5E6E78] text-[12px] font-semibold leading-[22px]"
+                      ? "text-[#5E6E78] dark:text-[#5E6E78] text-[12px] font-semibold leading-[22px]"
                       : column === "amount"
-                      ? "text-[#000] text-[12px] font-medium leading-[22px] text-end"
+                      ? "text-[#000] dark:text-white text-[12px] font-medium leading-[22px] text-end"
                       : column === "to_currency"
-                      ? "text-[#000] text-[12px] font-semibold leading-[28px]"
+                      ? "text-[#000] dark:text-white text-[12px] font-semibold leading-[28px]"
                       : column === "time"
-                      ? "text-[#000] text-[12px] font-semibold leading-[22px] text-end"
+                      ? "text-[#000] dark:text-white text-[12px] font-semibold leading-[22px] text-end"
                       : "text-end"
                   } ${
                     colIndex === 0

@@ -38,6 +38,12 @@ export const currentRateDate = [
       amount: '$0.49',
       commission: '-1.4%',
     },
+    {
+      currency: 'SOLUSDT',
+      digital_currency: 'Solana',
+      amount: '$495',
+      commission: '+11.1%',
+    },
   ];
   
   export const rateHistoryData = [
@@ -54,6 +60,20 @@ export const currentRateDate = [
       to_amount: '-$576',
       time: '06:01 AM',
       badge: 'Done',
+    },
+    {
+      img: DownIcon,
+      to_currency: 'DOGEUSDT',
+      to_amount: '+$3500',
+      time: '02:10 AM',
+      badge: 'Rejected',
+    },
+    {
+      img: UpIcon,
+      to_currency: 'FTMUSDT',
+      to_amount: '-$791',
+      time: '06:45 PM',
+      badge: 'Rejected',
     },
     {
       img: DownIcon,

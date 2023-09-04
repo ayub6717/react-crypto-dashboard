@@ -34,3 +34,21 @@ code {
 .custom-scrollbar::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
+.dark .custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #131313 transparent; 
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar {
+  width: 6px; 
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #131313;
+  border-radius: 4px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}

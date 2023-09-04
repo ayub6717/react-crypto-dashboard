@@ -1,6 +1,7 @@
 import React from "react";
 import Table from "./Table";
 import {currentRateDate} from '../data/currencyData';
+import Button from "./Button";
 
 const Tabs = ({ color }) => {
   const [openTab, setOpenTab] = React.useState(1);
@@ -17,8 +18,8 @@ const Tabs = ({ color }) => {
                 className={
                   "px-[13.5px] py-1 rounded-[7px] block text-[10px] font-semibold leading-[22px] text-center " +
                   (openTab === 1
-                    ? "text-bermuda bg-silver"
-                    : "text-[#000] bg-deepsilver")
+                    ? "text-bermuda dark:bg-[#131313] bg-silver"
+                    : "text-[#000] dark:text-white bg-deepsilver dark:bg-[#131313]")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -36,8 +37,8 @@ const Tabs = ({ color }) => {
                 className={
                     "px-[13.5px] py-1 rounded-[7px] block text-[10px] font-semibold leading-[22px] text-center " +
                     (openTab === 2
-                      ? "text-bermuda bg-silver"
-                      : "text-[#000] bg-deepsilver")
+                      ? "text-bermuda dark:bg-[#131313] bg-silver"
+                      : "text-[#000] dark:text-white bg-deepsilver dark:bg-[#131313]")
                   }
                 onClick={e => {
                   e.preventDefault();
@@ -55,8 +56,8 @@ const Tabs = ({ color }) => {
                 className={
                   "px-[13.5px] py-1 rounded-[7px] block text-[10px] font-semibold leading-[22px] text-center " +
                   (openTab === 3
-                    ? "text-bermuda bg-silver"
-                    : "text-[#000] bg-deepsilver")
+                    ? "text-bermuda dark:bg-[#131313] bg-silver"
+                    : "text-[#000] dark:text-white bg-deepsilver dark:bg-[#131313]")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -74,8 +75,8 @@ const Tabs = ({ color }) => {
                 className={
                   "px-[13.5px] py-1 rounded-[7px] block text-[10px] font-semibold leading-[22px] text-center " +
                   (openTab === 4
-                    ? "text-bermuda bg-silver"
-                    : "text-[#000] bg-deepsilver")
+                    ? "text-bermuda dark:bg-[#131313] bg-silver"
+                    : "text-[#000] dark:text-white bg-deepsilver dark:bg-[#131313]")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -93,8 +94,8 @@ const Tabs = ({ color }) => {
                 className={
                   "px-[13.5px] py-1 rounded-[7px] block text-[10px] font-semibold leading-[22px] text-center " +
                   (openTab === 5
-                    ? "text-bermuda bg-silver"
-                    : "text-[#000] bg-deepsilver")
+                    ? "text-bermuda dark:bg-[#131313] bg-silver"
+                    : "text-[#000] dark:text-white bg-deepsilver dark:bg-[#131313]")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -108,14 +109,16 @@ const Tabs = ({ color }) => {
               </a>
             </li>
           </ul>
-          <div className="relative flex flex-col break-words bg-white">
+          <div className="relative flex flex-col break-words bg-white dark:bg-[#1C1C25]">
             <div className="mt-[13px]">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                    <div className='w-[400px] h-[270px] overflow-auto custom-scrollbar'>
+                    <div className='xl:w-[419px] h-[270px] overflow-auto custom-scrollbar pr-[19px]'>
                         <Table data={currentRateDate} />
                     </div>
-                    <button className='text-[#8c8c8c] mt-[14px] text-[10px] font-semibold leading-[22px] border border-[#E5E5E5] rounded-[7px] px-2.5 py-1 inline-block'>View All</button>
+                    <div className=" float-right pr-6 mt-[13px]">
+                      <Button />
+                    </div>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <p>
