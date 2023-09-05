@@ -52,3 +52,6 @@ code {
 .dark .custom-scrollbar::-webkit-scrollbar-track {
   background-color: transparent;
 }
+canvas{
+  height: 330px !important;
+}

@@ -51,9 +51,7 @@ export default function ChartBar() {
                     intersect: true,
                 },
                 legend: {
-                    labels: {
-                        fontColor: 'rgba(17,17,17,.7)',
-                    },
+                   
                     align: 'end',
                     position: 'bottom',
                 },
