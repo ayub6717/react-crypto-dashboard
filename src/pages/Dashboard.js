@@ -20,7 +20,7 @@ function Dashboard() {
             ))}
         </div>
         <div className="xl:flex mt-[27px] gap-[25px]">
-          <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
+          <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px] h-[448px]"> 
             <ChartBar />
           </div>
           <div className="bg-white dark:bg-[#1C1C25] rounded-[15px] py-5 pl-[39px] pr-[20px] xl:w-[478px] relative">
@@ -34,7 +34,7 @@ function Dashboard() {
               <DonutChart />
           </div>
           <div className="flex-auto bg-white dark:bg-[#1C1C25] rounded-[15px]"> 
-            
+
           </div>
           <div className="bg-white dark:bg-[#1C1C25] rounded-[15px] pt-5 pl-[39px] pr-[20px] pb-5">
             <div className='flex justify-between items-center'>
