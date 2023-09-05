@@ -69,9 +69,9 @@ export default function Navbar({ showSidebar, setShowSidebar }) {
           </div>
         </div>
 
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-between items-center w-full gap-5 flex-col lg:flex-row">
           <div className="flex">
-            <form className="w-[626px]">
+            <form className="2xl:w-[626px]">
               <InputField />
             </form>
           </div>

@@ -10,10 +10,10 @@ const Tabs = ({ color }) => {
       <div className="flex flex-wrap">
         <div className="w-full">
           <ul
-            className="flex mb-0 list-none flex-wrap pt-[17px] pb-4 flex-row justify-end"
+            className="flex mb-0 list-none flex-wrap pt-14 sm:pt-[17px] pb-4 flex-row justify-end"
             role="tablist"
           >
-            <li className="-mb-px mr-2 last:mr-0 text-center">
+            <li className="-mb-px mr-2 last:mr-0 text-center pb-3 sm:pb-0">
               <a
                 className={
                   "px-[13.5px] py-1 rounded-[7px] block text-[10px] font-semibold leading-[22px] text-center " +
