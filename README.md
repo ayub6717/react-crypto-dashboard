@@ -23,12 +23,10 @@ This repository contains a fully functional user dashboard built with React. The
 
 # Getting Started with Create React App
 
-## Available Scripts
-
 In the project directory, you can run:
 
-## cd react-crypto-userdashboard
-
+### `cd react-crypto-userdashboard`
+### `yarn install`
 ### `yarn start`
 
 # Contributing
