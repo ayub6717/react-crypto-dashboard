@@ -46,21 +46,21 @@ function ConverterCard() {
             <input
               type="text"
               placeholder="100"
-              className="w-full sm:w-[308px] text-[15px] font-normal leading-[10px] py-[15px] pl-[17px] pr-[6.5rem] text-[#2c2c2c] dark:text-white rounded-[7px] outline-none bg-gray-50 dark:bg-[#1C1C25] focus:bg-white focus:border-[#2F80ED]"
+              className="w-full sm:w-[308px] text-[15px] font-normal leading-[10px] py-[15px] pl-[17px] pr-[6.5rem] text-[#626D7D] dark:text-white rounded-[7px] outline-none bg-gray-50 dark:bg-[#1C1C25] focus:bg-white focus:border-[#2F80ED]"
             />
-            <div className="absolute right-[7px] top-[6px] bg-[#21965464] rounded-[7px] px-2 w-[86px]">
-              <SelectField data={Currency} />
+            <div className="absolute right-[7px] top-[6px] bg-[#C7E4DB] rounded-[7px] px-2 w-[86px]">
+              <SelectField data={Currency} textColor="text-[#26AB5F]" />
             </div>
           </div>
 
           <div className="relative mt-[21px] border dark:border-[#292A32] border-[#E7EAEB] rounded-[7px]">
             <input
               type="text"
-              placeholder="100"
-              className="w-full sm:w-[308px] text-[15px] font-normal leading-[10px] py-[15px] pl-[17px] pr-[6.5rem] rounded-[7px] text-[#2c2c2c] dark:text-white outline-none bg-gray-50 dark:bg-[#1C1C25] focus:bg-white focus:border-[#2F80ED]"
+              placeholder="0.044"
+              className="w-full sm:w-[308px] text-[15px] font-normal leading-[10px] py-[15px] pl-[17px] pr-[6.5rem] rounded-[7px] text-[##626D7D] dark:text-white outline-none bg-gray-50 dark:bg-[#1C1C25] focus:bg-white focus:border-[#2F80ED]"
             />
-            <div className="absolute right-[7px] top-[6px]  bg-[#3c2e056b] rounded-[7px] px-2 w-[86px]">
-              <SelectField data={Currency_From} />
+            <div className="absolute right-[7px] top-[6px] bg-[#FCF4DB] rounded-[7px] px-2 w-[86px]">
+              <SelectField data={Currency_From} textColor="text-[#FF7C04]" />
             </div>
           </div>
 

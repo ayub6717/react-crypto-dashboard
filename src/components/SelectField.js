@@ -4,13 +4,12 @@ import Select, { components } from "react-select";
 const Option = (props) => (
   <components.Option {...props} className="country-option">
     <div className="flex items-center leading-[22px] text-[14px] font-medium">
-      {/* <img src={props.data.icon} alt="logo" className="country-logo" />y */}
       {props.data.label}
     </div>
   </components.Option>
 );
 
-const SelectField = ({CustomField, data}) => {
+const SelectField = ({CustomField, data, textColor }) => {
   const [selectedBranch, setSelectedBranch] = useState({});
   useEffect(()=>{
     if(data?.length>0){
@@ -24,8 +23,7 @@ const SelectField = ({CustomField, data}) => {
 
   const SingleValue = ({ children, ...props }) => (
     <components.SingleValue {...props}>
-      <div className="flex items-center leading-[22px] text-[10px] font-semibold text-[#26AB5F] p-[6px] rounded">
-        {/* <img src={selectedBranch.icon} alt="s-logo" className="selected-logo" /> */}
+      <div className={`flex items-center leading-[22px] text-[10px] font-semibold p-[6px] rounded ${textColor}`}>
         {children}
       </div>
     </components.SingleValue>
@@ -57,7 +55,7 @@ const SelectField = ({CustomField, data}) => {
     },
     dropdownIndicator: (provided, state) => ({
       ...provided,
-      color: '#fff',
+      color: '#000',
       cursor:'pointer',
       padding:0,
       'svg':{

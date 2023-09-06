@@ -1,3 +1,4 @@
+/* eslint-disable no-script-url */
 import { useEffect } from 'react';
 import Chart from 'chart.js';
 import CustomDropdown from "../components/CustomDropdown";
@@ -115,8 +116,8 @@ export default function ChartBar() {
     }, []);
     return (
         <div className='py-[35px] px-[43px]'>
-            <div className='flex flex-col 3xl:flex-row justify-between items-center'>
-                <div className='flex justify-between items-center w-full sm:w-[334px] bg-[#626d7d1f] p-5 rounded-[12px]'>
+            <div className='flex flex-col min-[1601px]:flex-row justify-between items-center'>
+                <div className='flex justify-between items-center w-full sm:w-[334px] bg-[#626d7d0c] p-5 rounded-[12px]'>
                     <div>
                         <p className="uppercase text-black dark:text-white text-[20px] font-semibold leading-[28px]">
                             BTCUSDT
